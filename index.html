@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GamePulse - Top Up Game Cepat & Mudah</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary": "#6366f1",
+                            "secondary": "#8b5cf6",
+                        },
+                    },
+                },
+            };
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+    <body class="font-sans text-gray-800 bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
+                    <i class="fas fa-gamepad"></i>
+                    <span>GamePulse</span>
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#games" class="text-gray-600 hover:text-primary transition">Games</a>
+                    <a href="#cara" class="text-gray-600 hover:text-primary transition">Cara Top Up</a>
+                    <a href="#kontak" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-indigo-600 transition">Kontak</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-center">
+                <div class="space-y-6">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900">
+                        Top Up Game
+                        <span class="text-primary">Instan</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Proses cepat, aman, dan terpercaya. Top up diamonds, coins, dan voucher game favorit kamu dalam hitungan detik.
+                    </p>
+                    <div class="pt-6">
+                        <a href="#games" class="inline-block bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-indigo-600 transition transform hover:scale-105">
+                            Mulai Top Up
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Games Section -->
+            <section id="games" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Game Populer</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-crown text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">Mobile Legends</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">Diamonds</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-fire text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">Free Fire</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">Diamonds</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-coins text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">PUBG Mobile</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">UC</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-gem text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">Genshin Impact</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">Genesis Crystal</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-trophy text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">Valorant</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">VP Points</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-pink-400 to-rose-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-star text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">Honkai Impact</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">Crystals</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-purple-400 to-indigo-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-bolt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">Arena of Valor</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">Vouchers</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-red-400 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-gift text-2xl text-white"></i>
+                        </div>
+                        <h3 class="font-semibold text-center">+ 100 Games</h3>
+                        <p class="text-xs text-gray-500 text-center mt-1">Lainnya</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cara Top Up -->
+            <section id="cara" class="bg-white py-16">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Cara Top Up</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center space-y-3">
+                            <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold text-primary">1</span>
+                            </div>
+                            <h3 class="font-semibold text-lg">Pilih Game</h3>
+                            <p class="text-sm text-gray-600">Pilih game favorit kamu dari daftar game yang tersedia</p>
+                        </div>
+                        <div class="text-center space-y-3">
+                            <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold text-primary">2</span>
+                            </div>
+                            <h3 class="font-semibold text-lg">Masukkan ID</h3>
+                            <p class="text-sm text-gray-600">Input user ID dan pilih nominal yang diinginkan</p>
+                        </div>
+                        <div class="text-center space-y-3">
+                            <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl font-bold text-primary">3</span>
+                            </div>
+                            <h3 class="font-semibold text-lg">Bayar & Selesai</h3>
+                            <p class="text-sm text-gray-600">Pilih metode pembayaran dan top up langsung masuk</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Keunggulan -->
+            <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center space-y-3">
+                        <i class="fas fa-bolt text-4xl text-primary"></i>
+                        <h3 class="font-semibold text-lg">Proses Instan</h3>
+                        <p class="text-sm text-gray-600">Top up langsung masuk dalam hitungan detik</p>
+                    </div>
+                    <div class="text-center space-y-3">
+                        <i class="fas fa-shield-alt text-4xl text-primary"></i>
+                        <h3 class="font-semibold text-lg">100% Aman</h3>
+                        <p class="text-sm text-gray-600">Transaksi terenkripsi dan terjamin keamanannya</p>
+                    </div>
+                    <div class="text-center space-y-3">
+                        <i class="fas fa-headset text-4xl text-primary"></i>
+                        <h3 class="font-semibold text-lg">CS 24/7</h3>
+                        <p class="text-sm text-gray-600">Layanan customer service siap membantu kapan saja</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section id="kontak" class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+                <div class="bg-gradient-to-r from-primary to-secondary p-12 rounded-3xl shadow-2xl text-white text-center">
+                    <h2 class="text-3xl font-bold mb-4">Siap Top Up?</h2>
+                    <p class="text-lg mb-8 opacity-90">Dapatkan bonus untuk top up pertama kamu!</p>
+                    <a href="#games" class="inline-block bg-white text-primary font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
+                        Top Up Sekarang
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-10 mt-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+                <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-2 justify-center md:justify-start">
+                            <i class="fas fa-gamepad"></i>
+                            <span>GamePulse</span>
+                        </h3>
+                        <p class="text-gray-400 text-sm">Top up game cepat, mudah, dan terpercaya.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3">Menu</h4>
+                        <ul class="text-sm space-y-2 text-gray-400">
+                            <li><a href="#games" class="hover:text-white transition">Games</a></li>
+                            <li><a href="#cara" class="hover:text-white transition">Cara Top Up</a></li>
+                            <li><a href="#kontak" class="hover:text-white transition">Kontak</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3">Kontak</h4>
+                        <p class="text-gray-400 text-sm">Email: support@gamepulse.com</p>
+                        <div class="flex space-x-4 mt-3 justify-center md:justify-start">
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-6">
+                    <p class="text-gray-500 text-sm">© 2025 GamePulse. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
