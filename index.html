@@ -1,222 +1,469 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>GamePulse - Top Up Game Cepat & Mudah</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            "primary": "#6366f1",
-                            "secondary": "#8b5cf6",
-                        },
-                    },
-                },
-            };
-        </script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
-    </head>
-    <body class="font-sans text-gray-800 bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen">
-        <!-- Header -->
-        <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
-                    <i class="fas fa-gamepad"></i>
-                    <span>GamePulse</span>
-                </a>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#games" class="text-gray-600 hover:text-primary transition">Games</a>
-                    <a href="#cara" class="text-gray-600 hover:text-primary transition">Cara Top Up</a>
-                    <a href="#kontak" class="px-6 py-2 bg-primary text-white rounded-full hover:bg-indigo-600 transition">Kontak</a>
-                </nav>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Hore Technology - Cloud & AI Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        accent: '#0070f3',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        }
 
-        <main>
-            <!-- Hero Section -->
-            <section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-center">
-                <div class="space-y-6">
-                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900">
-                        Top Up Game
-                        <span class="text-primary">Instan</span>
-                    </h1>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Proses cepat, aman, dan terpercaya. Top up diamonds, coins, dan voucher game favorit kamu dalam hitungan detik.
+        .gradient-text {
+            background: linear-gradient(90deg, #000 0%, #666 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .blur-bg {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .animate-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .feature-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-gray-200 bg-white/80 blur-bg">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-xl font-semibold tracking-tight">Hora Hore</a>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-sm text-gray-600 hover:text-black transition">About</a>
+                    <a href="#services" class="text-sm text-gray-600 hover:text-black transition">Services</a>
+                    <a href="#team" class="text-sm text-gray-600 hover:text-black transition">Team</a>
+                    <a href="#research" class="text-sm text-gray-600 hover:text-black transition">Research</a>
+                    <a href="#contact" class="px-4 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition">
+                        Contact
+                    </a>
+                </div>
+
+                <button class="md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-6 animate-in">
+                    Cloud & AI<br/>Solutions
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed animate-in delay-100">
+                    Transform your business with cutting-edge cloud infrastructure and AI integration.
+                </p>
+                <div class="flex flex-wrap gap-4 animate-in delay-200">
+                    <a href="#services" class="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition inline-flex items-center gap-2">
+                        Get Started
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#about" class="px-6 py-3 border border-gray-300 rounded-lg hover:border-black transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 px-6 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-4xl font-bold mb-2">99.9%</div>
+                    <div class="text-sm text-gray-600">Uptime</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-sm text-gray-600">Support</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">500+</div>
+                    <div class="text-sm text-gray-600">Clients</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">50ms</div>
+                    <div class="text-sm text-gray-600">Latency</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-600 text-lg">Complete technology solutions for digital transformation</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="feature-card p-8 border border-gray-200 rounded-2xl">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cloud Infrastructure</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Scalable and reliable cloud server solutions for high-performance business operations.
                     </p>
-                    <div class="pt-6">
-                        <a href="#games" class="inline-block bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-indigo-600 transition transform hover:scale-105">
-                            Mulai Top Up
-                            <i class="fas fa-arrow-right ml-2"></i>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>High Performance Computing</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>Scalable Storage</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>Real-time Processing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card p-8 border border-gray-200 rounded-2xl">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">AI Integration</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Intelligent automation platform to streamline business processes and boost efficiency.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>AI Automation Engine</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>Machine Learning Models</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>Data Analytics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card p-8 border border-gray-200 rounded-2xl">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-drone text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Drone Technology</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Advanced drone solutions for real-time monitoring and data collection across industries.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>Real-time Monitoring</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>Environmental Mapping</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-check text-xs"></i>
+                            <span>IoT Integration</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Leadership Team</h2>
+                <p class="text-gray-600 text-lg">Experienced professionals driving innovation</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        RH
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Robbanie Hilally K.</h3>
+                    <p class="text-sm text-gray-600 mb-3">CEO</p>
+                    <p class="text-sm text-gray-500">Strategic vision and investor relations</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        HA
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Hudzaifah Ar Rantisi</h3>
+                    <p class="text-sm text-gray-600 mb-3">CTO</p>
+                    <p class="text-sm text-gray-500">R&D Drone, AI & IoT Integration</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        F
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Ferdiansyah</h3>
+                    <p class="text-sm text-gray-600 mb-3">COO</p>
+                    <p class="text-sm text-gray-500">Operations & production management</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        FM
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Farid Aditya M.</h3>
+                    <p class="text-sm text-gray-600 mb-3">CPO</p>
+                    <p class="text-sm text-gray-500">UX development & tech roadmap</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        HH
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Haidar Hilmi</h3>
+                    <p class="text-sm text-gray-600 mb-3">CFO</p>
+                    <p class="text-sm text-gray-500">Financial planning & monetization</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-gray-200">
+                    <div class="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                        IA
+                    </div>
+                    <h3 class="font-semibold text-lg mb-1">Ikhsan Aflahal</h3>
+                    <p class="text-sm text-gray-600 mb-3">CMO</p>
+                    <p class="text-sm text-gray-500">Branding & marketing strategy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Server Research</h2>
+                <p class="text-gray-600 text-lg">Analysis for optimal infrastructure solution</p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-12">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 border-b border-gray-200">
+                            <tr>
+                                <th class="py-4 px-6 text-left font-semibold">Service</th>
+                                <th class="py-4 px-6 text-left font-semibold">Origin</th>
+                                <th class="py-4 px-6 text-left font-semibold">Type</th>
+                                <th class="py-4 px-6 text-left font-semibold">Pros</th>
+                                <th class="py-4 px-6 text-left font-semibold">Cons</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">Biznet Gio</td>
+                                <td class="py-4 px-6">🇮🇩 Indonesia</td>
+                                <td class="py-4 px-6">Cloud Computing</td>
+                                <td class="py-4 px-6">Low latency for Indonesia</td>
+                                <td class="py-4 px-6">Limited AI ecosystem</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">IDCloudHost</td>
+                                <td class="py-4 px-6">🇮🇩 Indonesia</td>
+                                <td class="py-4 px-6">VPS & Dedicated</td>
+                                <td class="py-4 px-6">Affordable pricing</td>
+                                <td class="py-4 px-6">Limited ML capabilities</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">AWS</td>
+                                <td class="py-4 px-6">🇺🇸 Global</td>
+                                <td class="py-4 px-6">IaaS</td>
+                                <td class="py-4 px-6">IoT Core & SageMaker</td>
+                                <td class="py-4 px-6">High cost & complexity</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">Google Cloud</td>
+                                <td class="py-4 px-6">🇺🇸 Global</td>
+                                <td class="py-4 px-6">Cloud Platform</td>
+                                <td class="py-4 px-6">Maps & Vertex AI</td>
+                                <td class="py-4 px-6">Slow support</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-6 font-medium">Alibaba Cloud</td>
+                                <td class="py-4 px-6">🇨🇳 Global</td>
+                                <td class="py-4 px-6">Cloud Platform</td>
+                                <td class="py-4 px-6">Strong in ASEAN</td>
+                                <td class="py-4 px-6">Documentation issues</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-4">Recommended Solution</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">AWS (Amazon Web Services)</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Based on analysis of AI, IoT, and Cloud requirements, AWS is recommended as the primary solution for its comprehensive ecosystem and global scalability.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2 text-sm">Key Benefits:</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check mt-1 text-xs"></i>
+                                    <span>AWS IoT Core & SageMaker integration</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check mt-1 text-xs"></i>
+                                    <span>Global scalability for ASEAN expansion</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check mt-1 text-xs"></i>
+                                    <span>Enterprise-grade security standards</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-4">Local Alternative</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">Biznet Gio (NEO Cloud)</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                For compliance with Indonesian data regulations (especially government projects), Biznet Gio offers enterprise-grade infrastructure with optimal local performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-24 px-6 bg-black text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform?</h2>
+            <p class="text-xl text-gray-400 mb-8">
+                Join the digital revolution with our cutting-edge solutions
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="px-8 py-4 bg-white text-black rounded-lg hover:bg-gray-100 transition font-medium">
+                    Get Started
+                </a>
+                <a href="#" class="px-8 py-4 border border-gray-700 rounded-lg hover:border-gray-500 transition">
+                    Schedule Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="font-semibold text-xl mb-4">Hora Hore Technology</div>
+                    <p class="text-sm text-gray-600 mb-6 max-w-md">
+                        Cloud infrastructure and AI integration platform for digital transformation.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:border-black transition">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:border-black transition">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-300 rounded-lg flex items-center justify-center hover:border-black transition">
+                            <i class="fab fa-github text-sm"></i>
                         </a>
                     </div>
                 </div>
-            </section>
 
-            <!-- Games Section -->
-            <section id="games" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Game Populer</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-crown text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">Mobile Legends</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">Diamonds</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-fire text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">Free Fire</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">Diamonds</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-coins text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">PUBG Mobile</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">UC</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-gem text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">Genshin Impact</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">Genesis Crystal</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-trophy text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">Valorant</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">VP Points</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-pink-400 to-rose-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-star text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">Honkai Impact</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">Crystals</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-purple-400 to-indigo-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-bolt text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">Arena of Valor</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">Vouchers</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer group">
-                        <div class="w-16 h-16 mx-auto bg-gradient-to-br from-red-400 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                            <i class="fas fa-gift text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-semibold text-center">+ 100 Games</h3>
-                        <p class="text-xs text-gray-500 text-center mt-1">Lainnya</p>
-                    </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><a href="#about" class="hover:text-black transition">About</a></li>
+                        <li><a href="#services" class="hover:text-black transition">Services</a></li>
+                        <li><a href="#team" class="hover:text-black transition">Team</a></li>
+                        <li><a href="#research" class="hover:text-black transition">Research</a></li>
+                    </ul>
                 </div>
-            </section>
 
-            <!-- Cara Top Up -->
-            <section id="cara" class="bg-white py-16">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6">
-                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Cara Top Up</h2>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="text-center space-y-3">
-                            <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                                <span class="text-2xl font-bold text-primary">1</span>
-                            </div>
-                            <h3 class="font-semibold text-lg">Pilih Game</h3>
-                            <p class="text-sm text-gray-600">Pilih game favorit kamu dari daftar game yang tersedia</p>
-                        </div>
-                        <div class="text-center space-y-3">
-                            <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                                <span class="text-2xl font-bold text-primary">2</span>
-                            </div>
-                            <h3 class="font-semibold text-lg">Masukkan ID</h3>
-                            <p class="text-sm text-gray-600">Input user ID dan pilih nominal yang diinginkan</p>
-                        </div>
-                        <div class="text-center space-y-3">
-                            <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                                <span class="text-2xl font-bold text-primary">3</span>
-                            </div>
-                            <h3 class="font-semibold text-lg">Bayar & Selesai</h3>
-                            <p class="text-sm text-gray-600">Pilih metode pembayaran dan top up langsung masuk</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Keunggulan -->
-            <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center space-y-3">
-                        <i class="fas fa-bolt text-4xl text-primary"></i>
-                        <h3 class="font-semibold text-lg">Proses Instan</h3>
-                        <p class="text-sm text-gray-600">Top up langsung masuk dalam hitungan detik</p>
-                    </div>
-                    <div class="text-center space-y-3">
-                        <i class="fas fa-shield-alt text-4xl text-primary"></i>
-                        <h3 class="font-semibold text-lg">100% Aman</h3>
-                        <p class="text-sm text-gray-600">Transaksi terenkripsi dan terjamin keamanannya</p>
-                    </div>
-                    <div class="text-center space-y-3">
-                        <i class="fas fa-headset text-4xl text-primary"></i>
-                        <h3 class="font-semibold text-lg">CS 24/7</h3>
-                        <p class="text-sm text-gray-600">Layanan customer service siap membantu kapan saja</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA -->
-            <section id="kontak" class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-                <div class="bg-gradient-to-r from-primary to-secondary p-12 rounded-3xl shadow-2xl text-white text-center">
-                    <h2 class="text-3xl font-bold mb-4">Siap Top Up?</h2>
-                    <p class="text-lg mb-8 opacity-90">Dapatkan bonus untuk top up pertama kamu!</p>
-                    <a href="#games" class="inline-block bg-white text-primary font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
-                        Top Up Sekarang
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-white py-10 mt-16">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-                <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                    <div>
-                        <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-2 justify-center md:justify-start">
-                            <i class="fas fa-gamepad"></i>
-                            <span>GamePulse</span>
-                        </h3>
-                        <p class="text-gray-400 text-sm">Top up game cepat, mudah, dan terpercaya.</p>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold mb-3">Menu</h4>
-                        <ul class="text-sm space-y-2 text-gray-400">
-                            <li><a href="#games" class="hover:text-white transition">Games</a></li>
-                            <li><a href="#cara" class="hover:text-white transition">Cara Top Up</a></li>
-                            <li><a href="#kontak" class="hover:text-white transition">Kontak</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold mb-3">Kontak</h4>
-                        <p class="text-gray-400 text-sm">Email: support@gamepulse.com</p>
-                        <div class="flex space-x-4 mt-3 justify-center md:justify-start">
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="border-t border-gray-800 mt-8 pt-6">
-                    <p class="text-gray-500 text-sm">© 2025 GamePulse. All rights reserved.</p>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li>Jakarta, Indonesia</li>
+                        <li>info@horahore.tech</li>
+                        <li>+62 21 1234 5678</li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-    </body>
+
+            <div class="pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
+                © 2024 Hora Hore Technology. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
